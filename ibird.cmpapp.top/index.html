@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Bird Observations</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hong Kong Bird Observations</h1>
+        <div class="search-section">
+            <h2>Query Bird Data with DeepSeek AI</h2>
+            <div class="api-key-container">
+                <label for="api-key-input">DeepSeek API Key:</label>
+                <input type="text" id="api-key-input" placeholder="Enter your DeepSeek API key">
+            </div>
+            <textarea id="query-input" rows="4" placeholder="Enter your query (e.g., 'List birds found in Ma Liu Shui')"></textarea>
+            <button id="query-submit">Submit Query</button>
+            <div id="query-loading" class="loading" hidden>Querying DeepSeek...</div>
+            <div id="query-error" class="error"></div>
+            <div id="query-result"></div>
+        </div>
+        <div id="loading">Loading bird observations...</div>
+        <table id="bird-table" class="bird-table">
+            <thead>
+                <tr>
+                    <th>Chinese Name</th>
+                    <th>English Name</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody id="bird-table-body"></tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
