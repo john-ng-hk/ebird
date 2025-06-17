@@ -130,12 +130,12 @@ Answer the following query based on the CSV data: ${query}`;
             'Authorization': `Bearer ${apiKey}`
         },
         body: JSON.stringify({
-            model: 'deepseek-rag', // Verify with DeepSeek documentation
+            model: 'deepseek-reasoner',
             messages: [
                 { role: 'system', content: 'You are a helpful assistant specialized in analyzing CSV data.' },
                 { role: 'user', content: prompt }
             ],
-            max_tokens: 500,
+            max_tokens: 10000,
             temperature: 0.7
         })
     })

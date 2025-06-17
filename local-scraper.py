@@ -151,7 +151,7 @@ def scrape_bird_list(driver, top_n=None):
     
     return bird_data
 
-def save_to_csv(data, filename='ibird.cmpapp.top/hk_birds.csv'):
+def save_to_csv(data, filename='home/ubuntu/ebird/ibird.cmpapp.top/hk_birds.csv'):
     csv_buffer = StringIO()
     writer = csv.DictWriter(csv_buffer, fieldnames=['Chinese Name', 'English Name', 'Description', 'Location', 'Date', 'URL'])
     writer.writeheader()
